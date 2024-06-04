@@ -1,9 +1,8 @@
 
-cpfV=(input('cpf: '))
 soma=0
     #RETIRANDO OS 2 DIGITOS SE 
-def cpff(n):  
-    n1=cpfV[0:9]
+def cpf(n):  
+    n1=n[0:9]
     soma=0
 
         #DESCOBRINDO O 1º DIGITO
@@ -31,10 +30,9 @@ def cpff(n):
     elif n3!=n:
         print(f'cpf invalido, numero correto: {n3}')
 
-cpff(cpfV)
 
-cpfV=input('digite o seu cpf')
-cpff(cpfV)
+cpf_pessoa=input('digite o seu cpf: ')
+cpf(cpf_pessoa)
 
 
 
