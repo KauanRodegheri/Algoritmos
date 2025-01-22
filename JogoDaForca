@@ -1,55 +1,52 @@
-lista=[]
-branco=[]
-conterro=0
-conterror=''
+lista = []
+branco = []
+conterro = 0
+conterror = ''
 
-palavras=('carro','moto','chiqueiro','cinema','holofote',
-'desenvolvedor','janela')
+palavras = ('carro', 'moto', 'chiqueiro', 'cinema', 'holofote',
+'desenvolvedor', 'janela')
 
-palavra=palavras[randint(0,len(palavras))]
+palavra = palavras[randint(0, len(palavras))]
 
 for i in palavra:
     lista.append(i)
     branco.append('_')
-    print('_',end=' ')
+    print('_', end=' ')
 
 #input
-while conterro!=len(lista):
-    opc=input('\nLETRA: ').lower()
+while conterro != len(lista):
+    opc = input('\nLETRA: ').lower()
     if opc in lista:
-        for i,k in enumerate(lista):
-            if opc==k:
+        for i, k in enumerate(lista):
+            if opc == k:
                 del branco[i]
-                branco.insert(i,k)
-      
-
-
+                branco.insert(i, k)
     else:
-        conterro+=1
-        if conterro==1:
-            conterror='''
+        conterro += 1
+        if conterro == 1:
+            conterror = '''
 ______
 |   _|_  
 |  |___| 
 |
 '''
-        if conterro==2:
-            conterror='''
+        if conterro == 2:
+            conterror = '''
 ______
 |   _|_  
 |  |___| 
 |    |
      |  
 '''
-        elif conterro==3:
-            conterror='''
+        elif conterro == 3:
+            conterror = '''
 ______
 |   _|_  
 |  |___| 
 |   \|/
      |  
 '''
-        elif conterro==4:
+        elif conterro == 4:
             print('''
 ______
 |   _|_  
@@ -60,18 +57,18 @@ ______
 VOCÊ PERDEU''')
             break
 
-    if conterror=='':
+    if conterror == '':
         print('''
 ______
 |    |  
 |   
 |
 ''')
-    print(conterror,end='          ')
+    print(conterror, end='          ')
 
 
     for i in branco:
-        print(i,end='  ')
+        print(i, end='  ')
     
     if '_' not in branco:
         print('\n\033[31mVocê GANHOU!\33[m')
